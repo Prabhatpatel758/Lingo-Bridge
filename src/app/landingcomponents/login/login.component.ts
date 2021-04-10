@@ -8,7 +8,7 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
   active = "active1";
-  userData = {}
+  userData = { email: '', password: '', cofirmPassword: '' }
   constructor(private router: Router) { }
 
   dashboard = () => {

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   active = "active1";
-  userData = {}
+  userData = { firstName: '', lastName: '', email: '', password: '', cofirmPassword: '', termsAndCondition: '' }
 
   constructor() { }
 
