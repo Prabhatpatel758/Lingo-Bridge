@@ -8,7 +8,9 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
   active = "active1";
+  userData = {}
   constructor(private router: Router) { }
+
   dashboard = () => {
     this.router.navigateByUrl('/default');
   }

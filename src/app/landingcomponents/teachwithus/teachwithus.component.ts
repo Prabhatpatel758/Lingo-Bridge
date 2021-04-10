@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-teachwithus',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeachwithusComponent implements OnInit {
   active = "active1";
-  constructor() { }
+  constructor(private router: Router) { }
 
+  applynow() {
+    this.router.navigateByUrl('/');
+  }
   ngOnInit(): void {
   }
 
