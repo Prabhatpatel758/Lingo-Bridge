@@ -1,0 +1,221 @@
+.page-title {
+    padding: 120px 0px 70px 0px;
+    position: relative;
+  }
+  
+  .page-title .block h1 {
+    color: #fff;
+  }
+  
+  .page-title .block p {
+    color: #fff;
+  }
+  
+  .page-title .breadcumb-nav {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .bg-1 {
+    overflow: hidden;
+    background: url("../../../assets/images/bg/22.jpg") no-repeat 70% 70%;
+    background-size: cover;
+    position: relative;
+    min-height: 650px;
+  }
+  .overlay:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: #e6f7ff;
+  }
+  
+  
+  .color{
+    color: #223a66;
+    font-weight: 700;
+    font-family: "Exo", sans-serif;
+  }
+  .currency-font-color{
+    color: #223a66;
+  }
+  .family{
+    font-family: "Exo", sans-serif;
+  }
+  
+  /* buttons implementation */
+  .btn {
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding: .75rem 2rem;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all .35s ease;
+  }
+  
+  .btn.btn-icon i {
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+    padding-left: 15px;
+  }
+  .btn:focus {
+    outline: 0px;
+    box-shadow: none;
+  }
+  
+  .btn-main {
+    background: #223a66;
+    color: #fff;
+    border-color: #223a66;
+  }
+  .btn-main:hover {
+    background: #e12454;
+    border-color: #e12454;
+    color: #fff;
+  }  
+  .btn-round-full {
+    border-radius: 50px;
+  }
+  div label input {
+    margin-right:100px;
+  }
+  
+  /* radio boxes implementation */
+  #ck-button input:checked + span {
+    background-color:#223a66;
+    color:#fff;
+  }
+  
+  .btncheck {
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.8125rem;
+    letter-spacing: .5px;
+    padding: .75rem 2rem;
+    font-family: "Exo", sans-serif;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: gray;
+    transition: all .35s ease;
+  }
+  .fontweight{
+    font-weight: bolder;
+  }
+  .about-img img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);
+    height: 250px;
+  }
+  .header-top-bar {
+    background: #223a66;
+    font-size: 14px;
+    padding: 10px 0px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #fff;
+  }
+  
+  .top-bar-info li a {
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .top-right-bar a span {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-brand {
+    margin-top: 10px;
+  }
+  
+  #navbarmain {
+    padding: 20px 0px;
+  }
+  
+  #navbarmain .nav-link {
+    font-weight: 600;
+    padding: 10px 15px;
+    color: #222;
+    font-family: "Exo", sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    transition: all .25s ease;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown .dropdown-menu {
+    position: absolute;
+    display: block;
+    background: #fff;
+    min-width: 240px;
+    top: 130%;
+    left: 0;
+    right: 0px;
+    opacity: 0;
+    padding: 0px;
+    visibility: hidden;
+    transition: all 0.3s ease-out 0s;
+    border: 0px;
+    border-top: 5px solid #e12454;
+    border-radius: 0px;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 115%;
+  }
+  
+  .dropdown .dropdown-item {
+    padding: 13px 20px;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+    font-weight: 400;
+    color: #555;
+  }
+  
+  .dropdown .dropdown-item:hover {
+    color: #e12454;
+  }
+  .doctors .btn-group > .btn-group:not(:last-child) > .btn, .doctors .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .doctors .btn-group > .btn:not(:first-child) {
+    border-radius: 3px;
+  }
+  .btn-main-2 {
+    background: #223a66;
+    color: #fff;
+    border-color: #223a66;
+  }
+  
+  .btn-main-2:hover {
+    background: #e12454;
+    color: #fff;
+    border-color: #e12454;
+  }
+  .btn-round-full {
+    border-radius: 50px;
+  }
+  .btn-main-3:hover {
+    background: #e12454;
+    color: #fff;
+    border-color: #e12454;
+  }
+  #btn-main-3:hover{
+    color: #fff;
+  }
+  .active1{
+    background: #e12454;
+    color: #fff;
+    border-color: #e12454;
+  }
+ 

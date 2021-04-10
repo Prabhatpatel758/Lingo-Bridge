@@ -1,0 +1,173 @@
+<header>
+    <nav class="navbar navbar-expand-lg navigation header-top-bar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logowhite.png" height="100" width="200" alt="abc" class="img-fluid">
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+                aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icofont-navigation-menu"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarmain">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link btn-main-2 text-white btn-main-2 btn-round-full" href="#/landing"><i
+                                class="fa fa-home"></i>
+                            HOME</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link btn-main-2 text-white btn-main-2 btn-round-full"
+                            [class]="active" href="#/landing/plansandprice"><i class="icofont-price"></i> PLANS &
+                            PRICING</a></li>
+                    <li class="nav-item"><a class="nav-link btn-main-2 text-white btn-main-2 btn-round-full"
+                            href="#/landing/teachwithus"><i class="icofont-teacher"></i> TEACH WITH US</a></li>
+
+                    <li class="nav-item"><a class="nav-link btn-main-2 text-white btn-main-2 btn-round-full"
+                            href="#/landing/contact"><i class="icofont-support"></i> CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link btn-main-2 text-white btn-main-2 btn-round-full"
+                            href="#/landing/login"><i class="fa fa-sign-in"></i> LOG IN </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center family">
+                    <h1 class="text-capitalize text-lg color ">Practise Live English Conversation Over
+                        VideoCall</h1>
+                    <p class="text-center family text-muted">Lingo Bridge connects you with spoken English experts as
+                        well
+                        as
+                        peers from
+                        India, so you
+                        can
+                        practice
+                        English conversation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5 pb-5">
+            <div class="col-sm-12 text-center ">
+                <h2 class="color">Book A Trial Session Now</h2>
+                <h4 class="family text-muted">[One session of 15 minutes over video call]</h4>
+                <p class="color">{{ 1 | currency:'INR' }}/-</p>
+                <div class="text-center">
+                    <input class="btn btn-main btn-round-full mt-2" name="submit" type="submit"
+                        value="Book your trial now">
+                    <!-- <input class="btn btn-main btn-round-full ml-2 mt-2" name="submit" type="submit"
+                        value="Download android app"> -->
+                </div>
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container-fluid pb-5 ">
+    <div class="row pt-5">
+        <div class="col-sm-12">
+            <h1 class="text-center mt-2 mt-md-4 color">Plan & Price</h1>
+            <hr>
+            <p class=" family text-danger">Book a trial of 15 minutes and get 100/Rs in wallet.</p>
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-sm-4">
+
+            <div class="form-group">
+                <select class="form-control form-control-lg family" id="sel1">
+                    <option>Duration of Sessions</option>
+                    <option>15 min per day</option>
+                    <option>25 min per day</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <select class="form-control form-control-lg family" id="sel1">
+                    <option>Frequency of Sessions</option>
+                    <option>1 day per week</option>
+                    <option>3 day per week</option>
+                    <option>5 day per week</option>
+                    <option>7 day per week</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="pl-4">
+                <div id="ck-button">
+                    <label class="ml-2">
+                        <input type="radio" value="1" name="radio" hidden>
+                        <span class="btncheck">
+                            <span class="fontweight">1 month</span><br> Rs 2100/month
+                        </span>
+                    </label>
+                    <label class="ml-2">
+                        <input type="radio" value="1" name="radio" hidden>
+                        <span class="btncheck">
+                            <span class="fontweight">1 month</span><br> Rs 2100/month
+                        </span>
+                    </label>
+                    <label class="ml-2">
+                        <input type="radio" value="1" name="radio" hidden>
+                        <span class="btncheck">
+                            <span class="fontweight">1 month</span><br> Rs 2100/month
+                        </span>
+                    </label>
+                    <label class="ml-2">
+                        <input type="radio" value="1" name="radio" hidden>
+                        <span class="btncheck">
+                            <span class="fontweight">1 month</span><br> Rs 2100/month
+                        </span>
+                    </label>
+                    <label class="ml-2">
+                        <span class="btncheck">
+                            <span class="fontweight">your chosen plan</span><br> 0 minutes a day 0 Day/week .
+                            Renew after1
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-5 ">
+        <div class="col-sm-12">
+            <h1 class="text-center mt-2 color">Plan Details</h1>
+            <p class="text-center family text-muted mt-4">15 minutes a day | 3 Days/Week</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 text-center color">
+            <h5>Payable</h5>
+            <h5>Discount</h5>
+            <h5>GST Charges(18%)</h5>
+        </div>
+        <div class="col-sm-6 text-center">
+            <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
+            <h5 class="text-danger">{{ 1 | currency:'INR' }}/-</h5>
+            <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 text-center color fontweight">
+            <h5>Total</h5>
+        </div>
+        <div class="col-sm-6 text-center">
+            <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <input class="btn btn-main btn-round-full mt-2" (click)="signInBtnClick();" name="submit" type="submit"
+                value="Sign In">
+        </div>
+    </div>
+</div>
+<app-landingfooter></app-landingfooter>
