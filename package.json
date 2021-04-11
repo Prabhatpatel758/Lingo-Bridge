@@ -1,21 +1,21 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
+  "name": "@lingobridge/lingobridge.com",
   "version": "2.11.2",
-  "description": "CoreUI Free Angular 11 Admin Template",
+  "description": "improve your spoken english through live video call",
   "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
+    "name": "Lingo Bridge",
+    "url": "http://lingobridgee.com",
+    "github": "https://github.com/lingobridge",
+    "twitter": "https://twitter.com/lingobridge"
   },
   "contributors": [
     {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
+      "name": "Lingo Bridge",
+      "url": "http://lingobridgee.com"
     }
   ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2021 creativeLabs Łukasz Holeczek",
+  "homepage": "https://lingobridgee.com/#/landing",
+  "copyright": "Copyright 2021 Lingo Bridge",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
