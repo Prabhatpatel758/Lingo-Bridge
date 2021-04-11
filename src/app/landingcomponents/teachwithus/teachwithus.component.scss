@@ -1,11 +1,8 @@
 .bg-1 {
     overflow: hidden;
-      background: url("../../../assets/images/bg/25.jpg") no-repeat 40% 40%;
+      background: url("../../../assets/img/bg/25.jpg") fixed center no-repeat;
       background-size: cover;
-      position: relative;
-      width: 100%;
-      min-height: 800px;
-      /* background-size: 100% 100%; */
+      min-height: 650px;
     }
   
    .section{
@@ -91,7 +88,7 @@
       border-radius: 50px;
     }  
     .bg-2 {
-      background: url("../../../assets/images/bg/22.jpg") no-repeat 50% 50%;
+      background: url("../../../assets/img/bg/22.jpg") no-repeat 50% 50%;
       background-size: cover;
       position: relative;
       min-height: 550px;

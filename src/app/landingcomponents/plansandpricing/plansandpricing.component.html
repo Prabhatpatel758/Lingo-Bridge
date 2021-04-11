@@ -2,12 +2,12 @@
     <nav class="navbar navbar-expand-lg navigation header-top-bar" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logowhite.png" height="100" width="200" alt="abc" class="img-fluid">
+                <img src="assets/img/logowhite.png" height="100" width="200" alt="abc" class="img-fluid">
             </a>
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
                 aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icofont-navigation-menu"></span>
+                <span class="icofont-navigation-menu text-white"></span>
             </button>
 
             <div class="collapse navbar-collapse " id="navbarmain">
@@ -32,43 +32,51 @@
         </div>
     </nav>
 </header>
-<section class="page-title bg-1">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="text-center family">
-                    <h1 class="text-capitalize text-lg color ">Practise Live English Conversation Over
-                        VideoCall</h1>
-                    <p class="text-center family text-muted">Lingo Bridge connects you with spoken English experts as
-                        well
-                        as
-                        peers from
-                        India, so you
-                        can
-                        practice
-                        English conversation.</p>
+
+<img src="assets/img/bg/studyinggirl.png" height="100%" width="100%" alt="" class="responsive">
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center mt-2 mt-md-4 color">Welcome to Lingo Bridge</h1>
+        </div>
+    </div>
+    <div class="card-deck pt-5">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <div class="feature-icon-1 mb-4">
+                    <i class="icofont-video color size"></i>
                 </div>
+                <h1 class="text-capitalize card-text text-lg  color">Practise Live English Conversation Over
+                    VideoCall</h1>
+                <p class="family text-muted">Lingo Bridge connects you with spoken English experts as
+                    well
+                    as
+                    peers from
+                    India, so you
+                    can
+                    practice
+                    English conversation.</p>
             </div>
         </div>
-        <div class="row pt-5 pb-5">
-            <div class="col-sm-12 text-center ">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <div class="feature-icon-1 mb-4">
+                    <i class="icofont-book-mark color size"></i>
+                </div>
                 <h2 class="color">Book A Trial Session Now</h2>
                 <h4 class="family text-muted">[One session of 15 minutes over video call]</h4>
                 <p class="color">{{ 1 | currency:'INR' }}/-</p>
                 <div class="text-center">
                     <input class="btn btn-main btn-round-full mt-2" name="submit" type="submit"
                         value="Book your trial now">
-                    <!-- <input class="btn btn-main btn-round-full ml-2 mt-2" name="submit" type="submit"
-                        value="Download android app"> -->
                 </div>
             </div>
-            <div class="col-sm-6">
-
-            </div>
         </div>
+
+
     </div>
-</section>
+</div>
 <div class="container-fluid pb-5 ">
     <div class="row pt-5">
         <div class="col-sm-12">
@@ -135,31 +143,47 @@
             </div>
         </div>
     </div>
+
+</div>
+<div class="container pb-5">
     <div class="row pt-5 ">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <h1 class="text-center mt-2 color">Plan Details</h1>
             <p class="text-center family text-muted mt-4">15 minutes a day | 3 Days/Week</p>
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-sm-6 text-center color">
+        <div class="col-md-6 text-center color">
             <h5>Payable</h5>
-            <h5>Discount</h5>
-            <h5>GST Charges(18%)</h5>
         </div>
-        <div class="col-sm-6 text-center">
-            <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
-            <h5 class="text-danger">{{ 1 | currency:'INR' }}/-</h5>
+        <div class="col-md-6 text-center">
             <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6 text-center color">
+            <h5>Discount</h5>
+        </div>
+        <div class="col-md-6 text-center">
+            <h5 class="text-danger">{{ 1 | currency:'INR' }}/-</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-center color">
+            <h5>GST Charges(18%)</h5>
+        </div>
+        <div class="col-md-6 text-center">
+            <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
+        </div>
+    </div>
+
     <hr>
     <div class="row">
-        <div class="col-sm-6 text-center color fontweight">
+        <div class="col-md-6 text-center color fontweight">
             <h5>Total</h5>
         </div>
-        <div class="col-sm-6 text-center">
+        <div class="col-md-6 text-center">
             <h5 class="currency-font-color">{{ 1 | currency:'INR' }}/-</h5>
         </div>
     </div>
