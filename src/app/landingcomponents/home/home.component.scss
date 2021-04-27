@@ -479,7 +479,12 @@ a:focus {
   min-height: 550px;
 } 
 .banner-text{
-  width: 40%; 
+  width: 35%; 
+  text-align: left;        
+  bottom: auto;
+}
+.banner-text-1{
+  width: 80%; 
   text-align: left;        
   bottom: auto;
 }

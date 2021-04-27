@@ -16,12 +16,12 @@ import { RegisterComponent } from './landingcomponents/register/register.compone
 
 export const routes: Routes = [
   // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'landing', component: LandingComponent,
+    path: 'home', component: LandingComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'home', component: HomeComponent },
+      { path: 'landing', component: HomeComponent },
       { path: 'plansandprice', component: PlansandpricingComponent },
       { path: 'teachwithus', component: TeachwithusComponent },
       { path: 'contact', component: ContactComponent },
