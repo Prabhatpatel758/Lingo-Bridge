@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
@@ -67,6 +68,7 @@ import { ContactComponent } from './landingcomponents/contact/contact.component'
     ChartsModule,
     IconModule,
     IconSetModule.forRoot(),
+    NgxIntlTelInputModule,
   ],
   declarations: [
     AppComponent,
