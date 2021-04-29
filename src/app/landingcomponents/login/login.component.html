@@ -64,9 +64,9 @@
                                 [customPlaceholder]="placeholder" required>
                             </ngx-intl-tel-input>
                             <div *ngIf=" phoneNumber.touched" class="pink-color pt-1">
-                                <p *ngIf="phoneNumber.errors?.required">Phone Number is a required field.
-                                </p>
-                                <!-- <p *ngIf="!phoneNumber.valid">Enter a valid Phone Number.</p> -->
+                                <!-- <p *ngIf="phoneNumber.errors?.required">Phone Number is a required field.
+                                </p> -->
+                                <!-- <p *ngIf="phoneNumber.invalid">Enter a valid Phone Number.</p> -->
                             </div>
                         </div>
 
@@ -76,9 +76,9 @@
                                     [(ngModel)]="user.email" name="email" #email="ngModel"
                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" id="" required>
                                 <div *ngIf="email.touched" class="pink-color pt-1">
-                                    <p *ngIf="email.errors?.required">Email is a required field.
+                                    <!-- <p *ngIf="email.errors?.required">Email is a required field.
                                     </p>
-                                    <p *ngIf="email.errors?.pattern">Enter a valid email.</p>
+                                    <p *ngIf="email.errors?.pattern">Enter a valid email.</p> -->
                                 </div>
                             </div>
 
