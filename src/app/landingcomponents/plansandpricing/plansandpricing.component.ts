@@ -9,10 +9,13 @@ import { Router } from '@angular/router'
 export class PlansandpricingComponent implements OnInit {
   active = "active1";
   constructor(private router: Router) { }
-  signInBtnClick() {
-    this.router.navigateByUrl('/');
-  }
+  // signInBtnClick() {
+
+  //   this.router.navigateByUrl('/');
+  // }
   ngOnInit(): void {
   }
-
+  navigateToLogin() {
+    this.router.navigateByUrl('home/login');
+  }
 }

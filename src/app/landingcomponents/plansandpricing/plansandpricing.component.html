@@ -68,8 +68,9 @@
                 <h4 class="family text-muted">[One session of 15 minutes over video call]</h4>
                 <p class="color">{{ 1 | currency:'INR' }}/-</p>
                 <div class="text-center">
-                    <input class="btn btn-main btn-round-full mt-2" name="submit" type="submit"
-                        value="Book your trial now">
+                    <button class="btn btn-success btn-lg" (click)="navigateToLogin()">Book your trial now</button>
+                    <!-- <input class="btn btn-main btn-round-full mt-2" name="submit" type="submit"
+                        value="Book your trial now"> -->
                 </div>
             </div>
         </div>
@@ -198,7 +199,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12 text-center">
-            <input class="btn btn-main btn-round-full mt-2" (click)="signInBtnClick();" name="submit" type="submit"
+            <input class="btn btn-success btn-lg mt-2" (click)="navigateToLogin();" name="submit" type="submit"
                 value="Sign In">
         </div>
     </div>
