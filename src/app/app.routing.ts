@@ -10,9 +10,8 @@ import { LandingComponent } from './landingcomponents/landing/landing.component'
 import { HomeComponent } from './landingcomponents/home/home.component';
 import { PlansandpricingComponent } from './landingcomponents/plansandpricing/plansandpricing.component';
 import { TeachwithusComponent } from './landingcomponents/teachwithus/teachwithus.component';
-import { ContactComponent } from './landingcomponents/contact/contact.component';
 import { LoginComponent } from './landingcomponents/login/login.component';
-import { RegisterComponent } from './landingcomponents/register/register.component';
+
 
 export const routes: Routes = [
   // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -24,9 +23,7 @@ export const routes: Routes = [
       { path: 'landing', component: HomeComponent },
       { path: 'plansandprice', component: PlansandpricingComponent },
       { path: 'teachwithus', component: TeachwithusComponent },
-      { path: 'contact', component: ContactComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'login', component: LoginComponent }
     ]
   },
   { path: '404', component: P404Component, data: { title: 'Page 404' } },

@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   placeholder = "Enter you phone number";
   CountryISO = CountryISO;
   preferredCountries: CountryISO[] = [CountryISO.India, CountryISO.UnitedStates, CountryISO.UnitedKingdom];
-
   constructor(private router: Router) { }
 
   dashboard = () => {

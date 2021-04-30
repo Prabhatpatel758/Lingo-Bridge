@@ -23,7 +23,6 @@ import { DefaultLayoutComponent } from './containers';
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './landingcomponents/login/login.component';
-import { RegisterComponent } from './landingcomponents/register/register.component';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -49,7 +48,7 @@ import { LandingComponent } from './landingcomponents/landing/landing.component'
 import { LandingfooterComponent } from './landingcomponents/landingfooter/landingfooter.component';
 import { PlansandpricingComponent } from './landingcomponents/plansandpricing/plansandpricing.component';
 import { TeachwithusComponent } from './landingcomponents/teachwithus/teachwithus.component';
-import { ContactComponent } from './landingcomponents/contact/contact.component';
+import { NavbarmainComponent } from './landingcomponents/navbarmain/navbarmain.component';
 
 @NgModule({
   imports: [
@@ -76,13 +75,12 @@ import { ContactComponent } from './landingcomponents/contact/contact.component'
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent,
     HomeComponent,
     LandingComponent,
     LandingfooterComponent,
     PlansandpricingComponent,
     TeachwithusComponent,
-    ContactComponent
+    NavbarmainComponent,
   ],
   providers: [
     {
