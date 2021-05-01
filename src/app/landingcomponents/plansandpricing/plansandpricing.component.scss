@@ -55,10 +55,20 @@
     background: #f4f9fc;
   }
   .padding-top{
-    padding-top: 90px;
+    padding-top: 80px;
   }
   .padding-top-1{
     padding-top: 200px;
   }
-
-  
+  .object {
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
