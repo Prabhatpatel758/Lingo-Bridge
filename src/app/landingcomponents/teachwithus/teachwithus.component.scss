@@ -1,10 +1,4 @@
-.bg-1 {
-    overflow: hidden;
-      background: url("../../../assets/img/bg/25.jpg") fixed center no-repeat;
-      background-size: cover;
-      min-height: 650px;
-    }
-  
+
    .section{
      height: 400px;
      border: 1px solid;
@@ -100,6 +94,24 @@
     .btn-round-full {
       border-radius: 50px;
     }
+    .gray-bg {
+      background: #f4f9fc;
+    }
+    .padding-bottom{
+      padding-bottom: 80px;
+    }
 
-    
+    .object {
+      -webkit-animation: action 1s infinite  alternate;
+      animation: action 1s infinite  alternate;
+  }
+  @-webkit-keyframes action {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-30px); }
+  }
+  @keyframes action {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-30px); }
+  }
+ 
   
