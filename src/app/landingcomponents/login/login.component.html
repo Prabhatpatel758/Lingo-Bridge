@@ -52,7 +52,7 @@
 
                         <div class="row" *ngIf="isCreateAccount">
                             <div class="col-md-4 mt-4">
-                                <button [disabled]="!myForm.valid" class="btn btn-primary btn-blue">Contnue</button>
+                                <button [disabled]="!myForm.valid" class="btn btn-success">Contnue</button>
                             </div>
                         </div>
 
@@ -60,7 +60,7 @@
                         <div class="row" *ngIf="!isCreateAccount">
                             <div class="col-md-4 mt-4">
                                 <button [disabled]="!myForm.valid" (click)="submit(myForm)"
-                                    class="btn btn-primary btn-blue">Login</button>
+                                    class="btn btn-success">Login</button>
                             </div>
 
 
