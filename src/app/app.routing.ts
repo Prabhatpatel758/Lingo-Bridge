@@ -11,6 +11,7 @@ import { HomeComponent } from './landingcomponents/home/home.component';
 import { PlansandpricingComponent } from './landingcomponents/plansandpricing/plansandpricing.component';
 import { TeachwithusComponent } from './landingcomponents/teachwithus/teachwithus.component';
 import { LoginComponent } from './landingcomponents/login/login.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 export const routes: Routes = [
@@ -40,7 +41,8 @@ export const routes: Routes = [
       { path: 'notifications', loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule) },
       { path: 'theme', loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule) },
       { path: 'widgets', loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule) }
-    ]
+    ],
+    canActivate: [AuthGuard]
   },
   { path: '**', component: P404Component }
 ];
