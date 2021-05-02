@@ -289,5 +289,14 @@ a:focus {
   width: 60px; 
   height: 60px;
 }
+.padding-bottom{
+  padding-bottom: 250px !important;
+}
 
+@media (max-width: 992px) {
+  .padding-bottom{
+    padding-bottom: 60px !important;
+  }
+  
+}
 /*# sourceMappingURL=maps/style.css.map */
