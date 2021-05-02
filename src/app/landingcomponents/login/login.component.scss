@@ -43,6 +43,10 @@
   .pink-color{
     color: #e12454;
   }
+  .blue-color{
+    color: #223a66;
+    font-family: "Exo", sans-serif;
+  }
   .underline{
     border-bottom: .5px dotted #223a66;
     
@@ -60,3 +64,28 @@
   .white-bg{
     background-color: white !important;
   }
+  .color{
+    color: #223a66;
+    font-family: "Exo", sans-serif;
+    font-weight: 700;
+  }
+  .mobile-text {
+    color: #989696b8;
+    font-size: 15px
+}
+
+.form-control {
+    margin-right: 12px
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ff8880;
+    outline: 0;
+    box-shadow: none
+}
+
+.cursor {
+    cursor: pointer
+}

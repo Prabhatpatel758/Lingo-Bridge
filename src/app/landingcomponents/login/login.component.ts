@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
   phoneNumber = "";
   isCreateAccount = false;
   isShowemail = false;
+  isShowOtpHolder = false;
+  error = 'xx';
 
   separateDialCode = true;
   SearchCountryField = SearchCountryField;
@@ -41,10 +43,22 @@ export class LoginComponent implements OnInit {
     this.loginService.loginUser("prabhat");
     this.router.navigateByUrl('/default');
   }
+  isOtpSendsuccessfully = true;
+  isError = false;
   signUp = () => {
-    console.log(this.user);
-  }
+    console.log(this.user.phoneNumber)
+    if (this.isOtpSendsuccessfully) {
+      this.isShowOtpHolder = true;
 
+    }
+    else {
+      this.error = "something went wrong!";
+      this.isError = true;
+    }
+  }
+  verify = () => {
+
+  }
   ngOnInit(): void {
   }
 

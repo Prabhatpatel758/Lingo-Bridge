@@ -48,17 +48,51 @@
                                         <p *ngIf="email.errors?.pattern">Enter a valid email.</p> -->
                                     </div>
                                 </div>
-
                             </ng-template>
+                            <!-- <div class="form-group mt-3 mb-0" *ngIf="isShowOtpHolder;">
+                                <input class="form-control" style="height: 7vh; border-bottom: dotted;" placeholder=""
+                                    [(ngModel)]="user.otp" name="" #email="ngModel" type="text" id="" required>
 
-                            <div class="row" *ngIf="isCreateAccount">
+                            </div> -->
+                            <div class="mt-5" *ngIf="isShowOtpHolder;">
+                                <h5 class="m-0">Mobile phone verification</h5><span class="mobile-text">Enter the
+                                    code we just send on your mobile phone <b class="text-danger"><br>+91
+                                        {{user.phoneNumber?.number}}</b></span>
+                                <div class="d-flex flex-row mt-2"><input type="text" class="form-control"
+                                        autofocus=""><input type="text" class="form-control"><input type="text"
+                                        class="form-control"><input type="text" class="form-control"></div>
+
+                            </div>
+
+
+                            <div *ngIf="isError">
+                                <p class="pink-color pt-1">{{error}}</p>
+                            </div>
+
+                            <!-- signup button -->
+                            <div class="row" *ngIf="isCreateAccount && !isShowOtpHolder">
                                 <div class="col-md-4 mt-4">
                                     <button [disabled]="!myForm.valid" (click)="signUp()"
                                         class="btn btn-success">Contnue</button>
                                 </div>
                             </div>
 
+                            <!-- verify button -->
+                            <div class="row" *ngIf="isShowOtpHolder">
+                                <div class="col-md-4 mt-4">
+                                    <button (click)="verify()" [disabled]="!myForm.valid"
+                                        class="btn btn-success">Verify</button>
+                                </div>
+                                <div class="col-md-8" *ngIf="!isShowemail; else elseBlock2">
+                                    <h5 class="blue-color mt-5 text-lg-right">Don't receive the
+                                        code?
+                                        <a style="text-decoration: none;" href="#/home/login"><span
+                                                class="pink-color underline" (click)="signUp()">Resend</span></a>
 
+                                    </h5>
+                                </div>
+                            </div>
+                            <!-- login button -->
                             <div class="row" *ngIf="!isCreateAccount">
                                 <div class="col-md-4 mt-4">
                                     <button [disabled]="!myForm.valid" (click)="signIn()"
