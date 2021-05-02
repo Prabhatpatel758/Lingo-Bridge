@@ -26,17 +26,17 @@ export class LoginComponent implements OnInit {
 
   signIn() {
     // if ((this.user.phoneNumber != "" && this.user.phoneNumber != null) || this.user.email != "" && this.user.email != null) {
-    // this.loginService.generateToken(this.user).subscribe(
-    //   (response: any) => {
-    //     console.log(response.token);
-    //     this.loginService.loginUser(response.token);
-    //     this.router.navigateByUrl('/default');
-    //   },
-    //   error => {
-    //     console.log(error);
-    //   }
-    // );
-    //}
+    //   this.loginService.generateToken(this.user).subscribe(
+    //     (response: any) => {
+    //       console.log(response.token);
+    //       this.loginService.loginUser(response.token);
+    //       this.router.navigateByUrl('/default');
+    //     },
+    //     error => {
+    //       console.log(error);
+    //     }
+    //   );
+    // }
 
     this.loginService.loginUser("prabhat");
     this.router.navigateByUrl('/default');

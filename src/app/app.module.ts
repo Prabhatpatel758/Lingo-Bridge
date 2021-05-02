@@ -2,7 +2,7 @@ import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
@@ -23,6 +23,8 @@ import { PlansandpricingComponent } from './landingcomponents/plansandpricing/pl
 import { TeachwithusComponent } from './landingcomponents/teachwithus/teachwithus.component';
 import { NavbarmainComponent } from './landingcomponents/navbarmain/navbarmain.component';
 import { DefaultLayoutComponent } from './containers';
+import { LoginService } from './services/login.service';
+import { AuthGuard } from './services/auth.guard';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -43,6 +45,7 @@ import {
   AppFooterModule,
   AppSidebarModule,
 } from '@coreui/angular';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 @NgModule({
   imports: [
@@ -77,11 +80,8 @@ import {
     TeachwithusComponent,
     NavbarmainComponent,
   ],
-  providers: [
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    },
+  providers: [LoginService, AuthGuard, [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     IconSetService,
   ],
   bootstrap: [AppComponent]
