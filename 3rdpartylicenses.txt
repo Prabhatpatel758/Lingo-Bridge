@@ -700,6 +700,9 @@ ngx-bootstrap/tooltip
 
 ngx-bootstrap/utils
 
+ngx-countdown
+MIT
+
 ngx-intl-tel-input
 MIT
 MIT License
