@@ -68,6 +68,7 @@ export class LoginComponent implements OnInit {
   }
   showlogin() {
     this.isCreateAccount = false;
+    // this.isShowOtpHolder = false;
   }
 
   showemail() {
