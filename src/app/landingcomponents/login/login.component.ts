@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   active = "active1";
   userData = { email: '', password: '', cofirmPassword: '' }
   user = { phoneNumber: '', email: '' };
-  phoneNumber = "";
   isCreateAccount = false;
   isShowemail = false;
   isShowOtpHolder = false;
@@ -27,7 +26,8 @@ export class LoginComponent implements OnInit {
 
   preferredCountries: CountryISO[] = [CountryISO.India, CountryISO.UnitedStates, CountryISO.UnitedKingdom];
   @ViewChild('cd', { static: false }) private countdown: CountdownComponent;
-
+  @ViewChild('phoneNumber')
+  public phoneNumber;
 
   constructor(private router: Router, private loginService: LoginService) { }
 
@@ -50,9 +50,13 @@ export class LoginComponent implements OnInit {
   }
   isOtpSendsuccessfully = true;
   isError = false;
+  isdisabled = false;
   signUp = () => {
     console.log(this.user.phoneNumber)
     if (this.isOtpSendsuccessfully) {
+      this.isdisabled = true;
+      // this.phoneNumber.elRef.nativeElement.firstChild.children[0].disabled = 'true';
+
       this.isShowOtpHolder = true;
       this.isShowResendButton = false;
       this.startCounter()
@@ -100,6 +104,11 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       this.countdown.begin();
     })
+  }
+
+  edit = () => {
+    this.isdisabled = false;
+    this.isShowOtpHolder = false;
   }
 
 }
