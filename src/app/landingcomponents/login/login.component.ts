@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   isShowemail = false;
   isShowOtpHolder = false;
   isShowResendButton = false;
+  isLogin = false;
   error = '';
 
   separateDialCode = true;
@@ -109,6 +110,10 @@ export class LoginComponent implements OnInit {
   edit = () => {
     this.isdisabled = false;
     this.isShowOtpHolder = false;
+  }
+  states = ["Saab", "Volvo", "BMW"];
+  getAllstates() {
+
   }
 
 }
