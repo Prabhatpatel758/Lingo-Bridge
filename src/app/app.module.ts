@@ -25,6 +25,7 @@ import { NavbarmainComponent } from './landingcomponents/navbarmain/navbarmain.c
 import { DefaultLayoutComponent } from './containers';
 import { LoginService } from './services/login.service';
 import { AuthGuard } from './services/auth.guard';
+import { CountdownModule } from 'ngx-countdown';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -66,6 +67,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     IconSetModule.forRoot(),
     NgxIntlTelInputModule,
     HttpClientModule,
+    CountdownModule,
   ],
   declarations: [
     AppComponent,

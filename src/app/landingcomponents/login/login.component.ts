@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router'
 import { SearchCountryField, CountryISO } from 'ngx-intl-tel-input';
 import { LoginService } from '../../../app/services/login.service';
+import { CountdownComponent } from 'ngx-countdown';
 
 @Component({
   selector: 'app-login',
@@ -16,13 +17,17 @@ export class LoginComponent implements OnInit {
   isCreateAccount = false;
   isShowemail = false;
   isShowOtpHolder = false;
-  error = 'xx';
+  isShowResendButton = false;
+  error = '';
 
   separateDialCode = true;
   SearchCountryField = SearchCountryField;
   placeholder = "Enter you phone number";
   CountryISO = CountryISO;
+
   preferredCountries: CountryISO[] = [CountryISO.India, CountryISO.UnitedStates, CountryISO.UnitedKingdom];
+  @ViewChild('cd', { static: false }) private countdown: CountdownComponent;
+
 
   constructor(private router: Router, private loginService: LoginService) { }
 
@@ -49,7 +54,8 @@ export class LoginComponent implements OnInit {
     console.log(this.user.phoneNumber)
     if (this.isOtpSendsuccessfully) {
       this.isShowOtpHolder = true;
-
+      this.isShowResendButton = false;
+      this.startCounter()
     }
     else {
       this.error = "something went wrong!";
@@ -62,22 +68,38 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  //to show create account button
   createaccount() {
     this.isCreateAccount = true;
   }
+
+  //to show login button
   showlogin() {
     this.isCreateAccount = false;
-    // this.isShowOtpHolder = false;
   }
 
+  // to show email box for login only
   showemail() {
     this.isShowemail = true;
   }
+
+  // to show phone number box for login or create account
   showphonenumber() {
     this.isShowemail = false;
   }
 
+  //to show resend button for timer
+  handleEvent = (event) => {
+    if (event.action === 'done') {
+      this.isShowResendButton = true;
+    }
+  }
 
+  //to start the timer
+  startCounter = () => {
+    setTimeout(() => {
+      this.countdown.begin();
+    })
+  }
 
 }

@@ -21,7 +21,7 @@
                             </div>
                             <div *ngIf="isShowOtpHolder">
                                 <h2 class="color ">Verify your mobile number</h2>
-                                <h5>We've sent an OTP to your mobile number </h5>
+                                <h5 class="text-muted">We've sent an OTP to your mobile number </h5>
                             </div>
                             <div class=" mt-5" *ngIf="!isShowemail; else elseBlock1">
                                 <ngx-intl-tel-input [cssClass]="'custom  text-center'"
@@ -59,16 +59,6 @@
                                     [(ngModel)]="user.otp" name="otp" #email="ngModel" type="text" id="" required>
 
                             </div>
-                            <!-- <div class="mt-5" *ngIf="isShowOtpHolder;">
-                                <h5 class="m-0">Mobile phone verification</h5><span class="mobile-text">Enter the
-                                    code we just send on your mobile phone <b class="text-danger"><br>+91
-                                        {{user.phoneNumber?.number}}</b></span>
-                                <div class="d-flex flex-row mt-2"><input type="text" class="form-control"
-                                        autofocus=""><input type="text" class="form-control"><input type="text"
-                                        class="form-control"><input type="text" class="form-control"></div>
-
-                            </div> -->
-
 
                             <div *ngIf="isError">
                                 <p class="pink-color pt-1">{{error}}</p>
@@ -89,10 +79,19 @@
                                         class="btn btn-success">Verify</button>
                                 </div>
                                 <div class="col-md-8">
-                                    <h5 class="blue-color mt-5 text-lg-right">Don't receive the
-                                        code?
+                                    <h5 class="mt-5 text-lg-right text-muted"
+                                        *ngIf="isShowOtpHolder && !isShowResendButton"><span class="underline"
+                                            (click)="signUp()">Resend OTP in</span>
+                                        <countdown #cd class="underline"
+                                            [config]="{leftTime: 60, format: 'mm:ss', demand: true, notify: [ 1, 1 ]}"
+                                            (event)="handleEvent($event)">
+                                        </countdown>
+                                    </h5>
+
+                                    <h5 class="blue-color mt-5 text-lg-right" *ngIf="isShowResendButton">
                                         <a style="text-decoration: none;" href="#/home/login"><span
-                                                class="pink-color underline" (click)="signUp()">Resend</span></a>
+                                                class="pink-color underline" (click)="signUp()">Resend OTP
+                                            </span></a>
 
                                     </h5>
                                 </div>
@@ -103,8 +102,6 @@
                                     <button [disabled]="!myForm.valid" (click)="signIn()"
                                         class="btn btn-success">Login</button>
                                 </div>
-
-
                                 <div class="col-md-8" *ngIf="!isShowemail; else elseBlock2">
                                     <h5 class="pink-color mt-5 text-lg-right">
                                         <a style="text-decoration: none;" href="#/home/login"><span
