@@ -4,13 +4,16 @@
             <div class="col-md-5 mx-auto">
                 <div class="card card-style">
                     <div class="card-body">
-                        <form class="form" #myForm="ngForm" *ngIf="!isLogin">
-                            <div *ngIf="!isCreateAccount">
+                        <form class="form" #myForm="ngForm">
+                            <div *ngIf="!isCreateAccount && !isdisabled">
                                 <h1 class="color ">Login</h1>
                                 <h5>or <a style="text-decoration: none;" href="#/home/login"><span
                                             class="pink-color underline" (click)="createaccount()">create
                                             your
                                             account</span></a> </h5>
+                            </div>
+                            <div *ngIf="isdisabled && !isShowOtpHolder">
+                                <h1 class="color ">Enter your password to login</h1>
                             </div>
                             <div *ngIf="isCreateAccount && !isShowOtpHolder">
                                 <h1 class="color ">Join Lingo-Bridge</h1>
@@ -25,7 +28,7 @@
                             </div>
 
                             <!-- phone number field for login or signup -->
-                            <div class=" mt-5" *ngIf="!isShowemail">
+                            <div class=" mt-5">
                                 <ngx-intl-tel-input [cssClass]="'custom  text-center'" [disabled]="isdisabled"
                                     [preferredCountries]="preferredCountries" [(ngModel)]="user.phoneNumber"
                                     name="phoneNumber" #phoneNumber="ngModel" [cssClass]="'custom'"
@@ -38,9 +41,10 @@
                                 </ngx-intl-tel-input>
 
                                 <!-- edit phone number link -->
-                                <a *ngIf="isShowOtpHolder" (click)="edit()" class="mt-3 underline blue-color edit-link"
+                                <a *ngIf="isdisabled" (click)="edit()" class="mt-3 underline blue-color edit-link"
                                     href="#/home/login">
                                     Edit</a>
+
                                 <div *ngIf=" phoneNumber.touched" class="pink-color pt-1">
                                     <!-- <p *ngIf="phoneNumber.errors?.required">Phone Number is a required field.
                                     </p> -->
@@ -48,61 +52,52 @@
                                 </div>
                             </div>
 
-                            <!-- email field for login only -->
-                            <div class="form-group mt-5 mb-0" *ngIf="isShowemail">
-                                <input class="form-control" style="height: 7vh;" placeholder="Email address"
-                                    [(ngModel)]="user.email" name="email" #email="ngModel"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" id="" required>
-                                <div *ngIf="email.touched" class="pink-color pt-1">
-                                    <!-- <p *ngIf="email.errors?.required">Email is a required field.
-                                        </p>
-                                        <p *ngIf="email.errors?.pattern">Enter a valid email.</p> -->
-                                </div>
-                            </div>
-
                             <!-- otp field -->
                             <div class="form-group mt-3 mb-0" *ngIf="isShowOtpHolder">
                                 <input class="form-control" style="height: 7vh;" placeholder="One time password"
-                                    [(ngModel)]="user.otp" name="otp" #email="ngModel" type="text" minlength="4" id=""
+                                    [(ngModel)]="user.otp" name="otp" #otp="ngModel" type="text" minlength="4" id=""
                                     required>
+                                <div *ngIf="otp.touched" class="pink-color pt-1">
+                                    <p *ngIf="otp.errors?.required">Pls Enter the OTP.</p>
+                                </div>
 
                             </div>
-
-                            <!-- field for error meassage -->
-                            <div *ngIf="isError">
-                                <p class="pink-color pt-1">{{error}}</p>
-                            </div>
-
                             <!-- signup form -->
                             <div *ngIf="isShowOtpHolder">
                                 <div class="form-group mt-3 mb-0">
                                     <input class="form-control" style="height: 7vh;" placeholder="Full Name"
                                         [(ngModel)]="user.fullName" name="fullName" #fullName="ngModel" type="text"
                                         id="" required>
+                                    <!-- <div *ngIf="fullName.touched" class="pink-color mt-1">
+                                        <p *ngIf="fullName.errors?.required">Phone Number is a required field.
+                                        </p>
+                                    </div> -->
+
                                 </div>
 
                                 <div class="form-group mt-3 mb-0">
                                     <input class="form-control" style="height: 7vh;" placeholder="Email"
                                         [(ngModel)]="user.emilId" name="emilId" #emilId="ngModel" type="email" id=""
                                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                                    <div *ngIf="emilId.touched" class="pink-color pt-1">
+                                        <p *ngIf="emilId.errors?.required">Email is required field.</p>
+                                        <p *ngIf="emilId.errors?.pattern">Enter a valid email.</p>
+                                    </div>
                                 </div>
 
                                 <div class="form-group mt-3 mb-0">
-                                    <input class="form-control" style="height: 7vh;" placeholder="Password"
-                                        [(ngModel)]="user.password" name="password" #password="ngModel" type="password"
-                                        id="" required>
+                                    <input class="form-control " style="height: 7vh;" placeholder="City"
+                                        [(ngModel)]="user.city" name="city" #city="ngModel" type="text" id="" required>
+
                                 </div>
-                                <div class="form-group mt-3 mb-0">
-                                    <input class="form-control" style="height: 7vh;" placeholder="Confirm Password"
-                                        [(ngModel)]="user.confirmPassword" name="confirmPassword"
-                                        #confirmPassword="ngModel" type="password" id="" required>
-                                </div>
-                                <div class="form-group mt-3">
-                                    <select class="form-control form-control-lg family" id="sel1">
-                                        <option>Select-State of residence</option>
-                                        <option>15 min per day</option>
-                                        <option>25 min per day</option>
-                                    </select>
+                            </div>
+                            <div class="form-group mt-3 mb-0" *ngIf="isShowOtpHolder || isdisabled">
+                                <input class="form-control" style="height: 7vh;" placeholder="Password"
+                                    [(ngModel)]="user.password" name="password" #password="ngModel" type="password"
+                                    id="" minlength="8" required>
+                                <div *ngIf="password.touched" class="pink-color pt-1 mb-0">
+                                    <span *ngIf="password.errors?.minlength">Your Password must be aleast 8 characters
+                                        long.</span>
                                 </div>
                             </div>
 
@@ -114,7 +109,7 @@
                                 </div>
                             </div>
 
-                            <!-- verify button -->
+                            <!-- verify button and otp place holder for signup-->
                             <div class="row" *ngIf="isShowOtpHolder">
                                 <div class="col-md-4 mt-4">
                                     <button (click)="verify()" [disabled]="!myForm.valid"
@@ -138,34 +133,29 @@
                                     </h5>
                                 </div>
                             </div>
-                            <!-- login button -->
+                            <!-- login buttons -->
                             <div class="row" *ngIf="!isCreateAccount">
-                                <div class="col-md-4 mt-4">
+                                <div class="col-md-4 mt-4" *ngIf="!isdisabled">
+                                    <button [disabled]="!myForm.valid" (click)="IsPhoneNumberExist()"
+                                        class="btn btn-success">Continue</button>
+                                </div>
+                                <div class="col-md-4 mt-4" *ngIf="isdisabled">
                                     <button [disabled]="!myForm.valid" (click)="signIn()"
                                         class="btn btn-success">Login</button>
                                 </div>
-                                <div class="col-md-8" *ngIf="!isShowemail">
+                                <div class="col-md-8" *ngIf="isdisabled">
                                     <h5 class="pink-color mt-5 text-lg-right">
                                         <a style="text-decoration: none;" href="#/home/login"><span
-                                                class="pink-color underline" (click)="showemail()">continue with your
-                                                email</span></a>
-
-                                    </h5>
-                                </div>
-                                <div class="col-md-8" *ngIf="isShowemail">
-                                    <h5 class="pink-color mt-5 text-lg-right">
-                                        <a style="text-decoration: none;" href="#/home/login"><span
-                                                class="pink-color underline" (click)="showphonenumber()">continue
-                                                with
-                                                mobile
-                                                number</span></a>
-
+                                                class="pink-color underline">Forgot Password?</span></a>
                                     </h5>
                                 </div>
                             </div>
-
                         </form>
-
+                        <div class="col-md-8" *ngIf="isError">
+                            <h5 class="pink-color mt-5 text-lg-right">
+                                <a style="text-decoration: none;"><span class="pink-color">{{error}}</span></a>
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>

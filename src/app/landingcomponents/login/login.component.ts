@@ -12,12 +12,12 @@ import { CountdownComponent } from 'ngx-countdown';
 export class LoginComponent implements OnInit {
   active = "active1";
   userData = { email: '', password: '', cofirmPassword: '' }
-  user = { phoneNumber: '', email: '' };
+  user = { phoneNumber: '', email: '', emilId: '', password: '', city: '' };
   isCreateAccount = false;
-  isShowemail = false;
+  // isShowemail = false;
   isShowOtpHolder = false;
   isShowResendButton = false;
-  isLogin = false;
+  isError = false;
   error = '';
 
   separateDialCode = true;
@@ -27,12 +27,28 @@ export class LoginComponent implements OnInit {
 
   preferredCountries: CountryISO[] = [CountryISO.India, CountryISO.UnitedStates, CountryISO.UnitedKingdom];
   @ViewChild('cd', { static: false }) private countdown: CountdownComponent;
-  @ViewChild('phoneNumber')
-  public phoneNumber;
+  @ViewChild('fullName') public fullName;
+  @ViewChild('emilId') public emilId;
+  @ViewChild('password') public password;
+  @ViewChild('confirmPassword') public confirmPassword;
+  @ViewChild('city') public city;
+
 
   constructor(private router: Router, private loginService: LoginService) { }
 
+  IsPhoneNumberExist = () => {
+    if (false) {
+      this.isdisabled = true;
+    }
+    else {
+      this.isError = true;
+      this.error = 'User does not exist.';
+    }
+
+  }
   signIn() {
+    this.isError = false;
+    this.error = '';
     // if ((this.user.phoneNumber != "" && this.user.phoneNumber != null) || this.user.email != "" && this.user.email != null) {
     //   this.loginService.generateToken(this.user).subscribe(
     //     (response: any) => {
@@ -49,15 +65,15 @@ export class LoginComponent implements OnInit {
     this.loginService.loginUser("prabhat");
     this.router.navigateByUrl('/default');
   }
+
   isOtpSendsuccessfully = true;
-  isError = false;
+
+  //to disable phone number field
   isdisabled = false;
   signUp = () => {
     console.log(this.user.phoneNumber)
     if (this.isOtpSendsuccessfully) {
       this.isdisabled = true;
-      // this.phoneNumber.elRef.nativeElement.firstChild.children[0].disabled = 'true';
-
       this.isShowOtpHolder = true;
       this.isShowResendButton = false;
       this.startCounter()
@@ -83,16 +99,6 @@ export class LoginComponent implements OnInit {
     this.isCreateAccount = false;
   }
 
-  // to show email box for login only
-  showemail() {
-    this.isShowemail = true;
-  }
-
-  // to show phone number box for login or create account
-  showphonenumber() {
-    this.isShowemail = false;
-  }
-
   //to show resend button for timer
   handleEvent = (event) => {
     if (event.action === 'done') {
@@ -111,9 +117,6 @@ export class LoginComponent implements OnInit {
     this.isdisabled = false;
     this.isShowOtpHolder = false;
   }
-  states = ["Saab", "Volvo", "BMW"];
-  getAllstates() {
 
-  }
 
 }
