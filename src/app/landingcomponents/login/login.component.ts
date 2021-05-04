@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private loginService: LoginService) { }
 
   IsPhoneNumberExist = () => {
-    if (false) {
+    if ('IsPhoneNumberExist') {
       this.isdisabled = true;
     }
     else {
