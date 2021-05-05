@@ -12,6 +12,7 @@ import { PlansandpricingComponent } from './landingcomponents/plansandpricing/pl
 import { TeachwithusComponent } from './landingcomponents/teachwithus/teachwithus.component';
 import { LoginComponent } from './landingcomponents/login/login.component';
 import { AuthGuard } from './services/auth.guard';
+import { ProfileComponent } from './views/profile/profile.component';
 
 
 export const routes: Routes = [
@@ -34,6 +35,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full', },
       { path: 'dashboard', loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: 'profile', loadChildren: () => import('./views/profile/profile.module').then(m => m.ProfileModule) },
       { path: 'base', loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule) },
       { path: 'buttons', loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule) },
       { path: 'charts', loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule) },
