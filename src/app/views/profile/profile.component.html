@@ -6,46 +6,74 @@
             <div class="col-md-4 text-center ">
                 <img class="rounded-circle margin-top" height="150px" width="150px" src="assets/img/icons/profile.png"
                     alt="">
+                <!-- <span class="feature-icon icon margin-top"><i class="icofont-ui-camera"></i></span> -->
+
                 <h2 class="blue-color pt-3">Welcome Prabhat</h2>
             </div>
             <div class="col-md-8  gray-bg mb-0">
                 <div class="row pt-3" style="text-align: right;">
                     <div class="col-md-12 ">
-                        <button class="btn btn-outline-success ml-2 mt-2">Edit Profile</button>
-                        <button class="btn btn-outline-success ml-2 mt-2">Change Password</button>
+                        <button class="btn btn-outline-success ml-2 mt-2" (click)="enableForm()">Edit Profile</button>
+                        <button class="btn btn-outline-success ml-2 mt-2" (click)="changePassword()">Change
+                            Password</button>
                     </div>
                 </div>
                 <section>
                     <div class="row margin-left mt-4">
                         <div class="col-md-7">
-                            <div class="form-group">
-                                <label class="form-col-form-label text-muted" for="">User Name</label>
-                                <input type="text" class="form-control" id="inputSuccess1">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-col-form-label text-muted" for="">Email</label>
-                                <input type="email" class="form-control" id="inputError1">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-col-form-label text-muted" for="">Qualification</label>
-                                <input type="text" class="form-control" id="inputError1">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-col-form-label text-muted" for="">Profession</label>
-                                <input type="text" class="form-control" id="inputError1">
-                            </div>
-
-                            <div class="form-group">
-                                <!-- <label class="form-col-form-label" for="">City</label>
-                                <input type="text" class="form-control" id="inputError1"> -->
-                                <button class="btn btn-outline-success">Edit Profile</button>
-                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for="">User Name</label>
+                                    <input type="text" class="form-control" [ngModel]="user.fullName" name="fullName"
+                                        [disabled]="isDisabled" id="inputSuccess1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for="">Email</label>
+                                    <input type="email" class="form-control" [ngModel]="user.emilId" name="emailId"
+                                        [disabled]="isDisabled" id="inputError1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for="">Qualification</label>
+                                    <input type="text" class="form-control" [ngModel]="user.qualification"
+                                        name="qualification" [disabled]="isDisabled" id="inputError1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for="">Profession</label>
+                                    <input type="text" class="form-control" [ngModel]="user.profession"
+                                        name="profession" [disabled]="isDisabled" id="inputError1">
+                                </div>
+                                <div class="form-group mt-4">
+                                    <button class="btn btn-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-3" [hidden]="!isChangePassword">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for=""></label>
+                                    <input type="password" class="form-control mt-2 margin-left"
+                                        placeholder="Old Password" [ngModel]="cred.oldPassword" name="qualification"
+                                        id="inputError1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for=""></label>
+                                    <input type="password" class="form-control mt-2 margin-left"
+                                        placeholder="New Password" [ngModel]="cred.newPassword" name="qualification"
+                                        id="inputError1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-col-form-label text-muted" for=""></label>
+                                    <input type="password" class="form-control mt-2 margin-left"
+                                        placeholder="Confirm Password" [ngModel]="cred.confirmPassword"
+                                        name="qualification" id="inputError1">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <button class="btn btn-success margin-left">Change</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </section>
-
-
-
             </div>
         </div>
 
