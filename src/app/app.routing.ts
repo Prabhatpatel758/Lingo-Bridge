@@ -36,6 +36,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full', },
       { path: 'dashboard', loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule) },
       { path: 'profile', loadChildren: () => import('./views/profile/profile.module').then(m => m.ProfileModule) },
+      { path: 'wallet', loadChildren: () => import('./views/wallet/wallet.module').then(m => m.WalletModule) },
       { path: 'base', loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule) },
       { path: 'buttons', loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule) },
       { path: 'charts', loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule) },

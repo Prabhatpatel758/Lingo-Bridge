@@ -1,0 +1,32 @@
+<div class="card justify-content-center">
+    <div class="card-body ">
+        <section>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="feature-item mb-5 mb-lg-0 text-center">
+                            <div class="feature-icon mb-4">
+                                <h2>Balance</h2>
+                            </div>
+                            <h4 class="mb-3 underline">{{balance | currency:'INR'}}</h4>
+                            <button class="btn btn-success" (click)="addMoneyToWallet()"> Add Money</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row text-center mt-3">
+                    <div class="col-md-12">
+                        <div class="feature-item mb-5 mb-lg-0 text-center">
+                            <div class="feature-icon mb-4" style="height: 400px;">
+                                <h2>Transaction Details</h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

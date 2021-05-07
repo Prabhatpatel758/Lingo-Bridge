@@ -19,7 +19,6 @@ export class ProfileComponent implements OnInit {
     this.isDisabled = false;
   }
   changePassword = () => {
-    console.log('hi');
     this.isChangePassword = !this.isChangePassword;
   }
 }

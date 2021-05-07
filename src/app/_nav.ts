@@ -32,7 +32,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Wallet',
-    url: '/abc',
+    url: '/default/wallet',
     icon: 'icon-wallet'
   },
   {
