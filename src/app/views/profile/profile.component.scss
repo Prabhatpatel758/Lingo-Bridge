@@ -9,3 +9,14 @@
 .margin-top{
   margin-top: 100px !important;
 }
+.margin-left{
+  margin-left: 60px;
+}
+@media (max-width: 768px) {
+  .margin-left{
+    margin-left: 0px;
+  }
+  .margin-top{
+    margin-top: 50px !important;
+  }
+}
