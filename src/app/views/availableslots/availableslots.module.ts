@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
 import { AvailableslotsComponent } from './availableslots.component';
 import { AvailableSlotsRoutingModule } from './availableslots-routing.module';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
+import { SharedModule } from '../../shared/shared.module'
 
 @NgModule({
     imports: [
-        FormsModule,
         AvailableSlotsRoutingModule,
+        BsDatepickerModule.forRoot(),
+        SharedModule
     ],
     declarations: [AvailableslotsComponent]
 })

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { WalletComponent } from './wallet.component';
 import { WalletRoutingModule } from './wallet-routing.module';
 
+
 @NgModule({
     imports: [
         FormsModule,

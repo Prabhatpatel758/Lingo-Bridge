@@ -8,6 +8,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { DatePipe, CurrencyPipe } from '@angular/common';
 
+
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
@@ -69,6 +70,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     NgxIntlTelInputModule,
     HttpClientModule,
     CountdownModule,
+
 
   ],
   declarations: [
