@@ -38,6 +38,7 @@ export const routes: Routes = [
       { path: 'profile', loadChildren: () => import('./views/profile/profile.module').then(m => m.ProfileModule) },
       { path: 'wallet', loadChildren: () => import('./views/wallet/wallet.module').then(m => m.WalletModule) },
       { path: 'availableslots', loadChildren: () => import('./views/availableslots/availableslots.module').then(m => m.AvailableSlotsModule) },
+      { path: 'plandetails', loadChildren: () => import('./views/plandetails/plandetails.module').then(m => m.PlanDetailsModule) },
       { path: 'base', loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule) },
       { path: 'buttons', loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule) },
       { path: 'icons', loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule) },

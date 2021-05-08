@@ -49,7 +49,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Plan Details',
-    url: '/default/charts',
+    url: '/default/plandetails',
     icon: 'icon-doc'
   },
   {
@@ -68,40 +68,4 @@ export const navItems: INavData[] = [
     url: '/default/icons',
     icon: 'icon-logout'
   },
-  // {
-  //   name: 'Icons',
-  //   url: '/default/icons',
-  //   icon: 'icon-star',
-  //   children: [
-  //     {
-  //       name: 'CoreUI Icons',
-  //       url: '/default/icons/coreui-icons',
-  //       icon: 'icon-star',
-  //       badge: {
-  //         variant: 'success',
-  //         text: 'NEW'
-  //       }
-  //     },
-  //     {
-  //       name: 'Flags',
-  //       url: '/default/icons/flags',
-  //       icon: 'icon-star'
-  //     },
-  //     {
-  //       name: 'Font Awesome',
-  //       url: '/default/icons/font-awesome',
-  //       icon: 'icon-star',
-  //       badge: {
-  //         variant: 'secondary',
-  //         text: '4.7'
-  //       }
-  //     },
-  //     {
-  //       name: 'Simple Line Icons',
-  //       url: '/default/icons/simple-line-icons',
-  //       icon: 'icon-star'
-  //     }
-  //   ]
-  // },
-
 ];

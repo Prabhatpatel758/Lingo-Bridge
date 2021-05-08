@@ -1,0 +1,25 @@
+.feature-item {
+    flex-basis: 33.33%;
+    margin: 0px 0px;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);
+  }
+  
+  .feature-item .feature-icon i {
+    font-size: 50px;
+    color: #223a66;
+  }
+  
+  .feature-item h4, h2{
+    color: #223a66;
+    font-weight: 700;
+  }
+  
+  .feature-item p {
+    font-size: 14px;
+  }
+  .align-left{
+    text-align: left !important;
+  }

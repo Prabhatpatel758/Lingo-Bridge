@@ -49,6 +49,7 @@ import {
   AppSidebarModule,
 } from '@coreui/angular';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { PlandetailsComponent } from './views/plandetails/plandetails.component';
 
 @NgModule({
   imports: [
@@ -85,6 +86,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     PlansandpricingComponent,
     TeachwithusComponent,
     NavbarmainComponent,
+    PlandetailsComponent,
   ],
   providers: [LoginService, AuthGuard, [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
     { provide: LocationStrategy, useClass: HashLocationStrategy },
