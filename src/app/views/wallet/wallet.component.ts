@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-wallet',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wallet.component.scss']
 })
 export class WalletComponent implements OnInit {
-  balance = 0;
-  constructor() { }
+  balance = '';
+  constructor(private currency: CurrencyPipe) {
+    this.balance = currency.transform(0, 'INR');
+  }
 
   ngOnInit(): void {
   }

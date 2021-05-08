@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { DatePipe, CurrencyPipe } from '@angular/common';
 
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,8 +48,6 @@ import {
   AppSidebarModule,
 } from '@coreui/angular';
 import { AuthInterceptor } from './services/auth.interceptor';
-import { WalletComponent } from './views/wallet/wallet.component';
-import { AvailableslotsComponent } from './views/availableslots/availableslots.component';
 
 @NgModule({
   imports: [
@@ -70,6 +69,7 @@ import { AvailableslotsComponent } from './views/availableslots/availableslots.c
     NgxIntlTelInputModule,
     HttpClientModule,
     CountdownModule,
+
   ],
   declarations: [
     AppComponent,
@@ -83,12 +83,11 @@ import { AvailableslotsComponent } from './views/availableslots/availableslots.c
     PlansandpricingComponent,
     TeachwithusComponent,
     NavbarmainComponent,
-    WalletComponent,
-    AvailableslotsComponent,
   ],
   providers: [LoginService, AuthGuard, [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    IconSetService,
+    IconSetService, DatePipe,
+    CurrencyPipe
   ],
   bootstrap: [AppComponent]
 })

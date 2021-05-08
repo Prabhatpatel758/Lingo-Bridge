@@ -1,86 +1,90 @@
-<div class="card justify-content-center">
-    <div class="card-body ">
+<div class="row text-center mt-3">
+    <div class="col-md-12">
+        <div class="feature-item mb-5 mb-lg-0 ">
+            <!--/.row-->
+            <div class="row">
+                <div class="col-md-4 ">
+                    <img class="rounded-circle margin-top" height="150px" width="150px"
+                        src="assets/img/icons/profile.png" alt="">
+                    <!-- <span class="feature-icon icon margin-top"><i class="icofont-ui-camera"></i></span> -->
 
-        <!--/.row-->
-        <div class="row">
-            <div class="col-md-4 text-center ">
-                <img class="rounded-circle margin-top" height="150px" width="150px" src="assets/img/icons/profile.png"
-                    alt="">
-                <!-- <span class="feature-icon icon margin-top"><i class="icofont-ui-camera"></i></span> -->
-
-                <h2 class="blue-color pt-3">Welcome Prabhat</h2>
-            </div>
-            <div class="col-md-8  gray-bg mb-0">
-                <div class="row pt-3" style="text-align: right;">
-                    <div class="col-md-12 ">
-                        <button class="btn btn-outline-success ml-2 mt-2" (click)="enableForm()">Edit Profile</button>
-                        <button class="btn btn-outline-success ml-2 mt-2" (click)="changePassword()">Change
-                            Password</button>
-                    </div>
+                    <h2 class="blue-color pt-3">Welcome Prabhat</h2>
                 </div>
-                <section>
-                    <div class="row margin-left mt-4">
-                        <div class="col-md-7">
-                            <form>
-                                <div class="form-group">
-                                    <label class="form-col-form-label text-muted" for="">User Name</label>
-                                    <input type="text" class="form-control" [ngModel]="user.fullName" name="fullName"
-                                        [disabled]="isDisabled">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-col-form-label text-muted" for="">Email</label>
-                                    <input type="email" class="form-control" [ngModel]="user.emilId" name="emailId"
-                                        [disabled]="isDisabled">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-col-form-label text-muted" for="">Qualification</label>
-                                    <input type="text" class="form-control" [ngModel]="user.qualification"
-                                        name="qualification" [disabled]="isDisabled">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-col-form-label text-muted" for="">Profession</label>
-                                    <input type="text" class="form-control" [ngModel]="user.profession"
-                                        name="profession" [disabled]="isDisabled">
-                                </div>
-                                <div class="form-group mt-4">
-                                    <button class="btn btn-success">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-5" [hidden]="!isChangePassword">
-                            <form>
-
-                                <div class="card card-accent-info mt-4 ml-5 mb-0" style="float: left;">
-                                    <div class="card-header">
-                                        Change Password
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control mt-2" placeholder="Old Password"
-                                                [ngModel]="cred.oldPassword" name="qualification">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control mt-2" placeholder="New Password"
-                                                [ngModel]="cred.newPassword" name="qualification">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control mt-2"
-                                                placeholder="Confirm Password" [ngModel]="cred.confirmPassword"
-                                                name="qualification">
-                                        </div>
-                                        <div class="form-group mt-3">
-                                            <button class="btn btn-success">Change</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
+                <div class="col-md-8  gray-bg mb-0" style="border-radius: 10px;">
+                    <div class="row pt-3" style="text-align: right;">
+                        <div class="col-md-12 ">
+                            <button class="btn btn-outline-success ml-2 mt-2" (click)="enableForm()">Edit
+                                Profile</button>
+                            <button class="btn btn-outline-success ml-2 mt-2" (click)="changePassword()">Change
+                                Password</button>
                         </div>
                     </div>
-                </section>
+                    <section>
+                        <div class="row margin-left mt-4">
+                            <div class="col-md-7">
+                                <form>
+                                    <div class="form-group align-left">
+                                        <label class="form-col-form-label text-muted " for="">User
+                                            Name</label>
+                                        <input type="text" class="form-control" [ngModel]="user.fullName"
+                                            name="fullName" [disabled]="isDisabled">
+                                    </div>
+                                    <div class="form-group align-left">
+                                        <label class="form-col-form-label text-muted" for="">Email</label>
+                                        <input type="email" class="form-control" [ngModel]="user.emilId" name="emailId"
+                                            [disabled]="isDisabled">
+                                    </div>
+                                    <div class="form-group align-left">
+                                        <label class="form-col-form-label text-muted" for="">Qualification</label>
+                                        <input type="text" class="form-control" [ngModel]="user.qualification"
+                                            name="qualification" [disabled]="isDisabled">
+                                    </div>
+                                    <div class="form-group align-left">
+                                        <label class="form-col-form-label text-muted" for="">Profession</label>
+                                        <input type="text" class="form-control" [ngModel]="user.profession"
+                                            name="profession" [disabled]="isDisabled">
+                                    </div>
+                                    <div class="form-group mt-4 align-left">
+                                        <button class="btn btn-success">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-5" [hidden]="!isChangePassword">
+                                <form>
+
+                                    <div class="card card-accent-info mt-4 ml-5 mb-0" style="float: left;">
+                                        <div class="card-header">
+                                            Change Password
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <input type="password" class="form-control mt-2"
+                                                    placeholder="Old Password" [ngModel]="cred.oldPassword"
+                                                    name="qualification">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control mt-2"
+                                                    placeholder="New Password" [ngModel]="cred.newPassword"
+                                                    name="qualification">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control mt-2"
+                                                    placeholder="Confirm Password" [ngModel]="cred.confirmPassword"
+                                                    name="qualification">
+                                            </div>
+                                            <div class="form-group mt-3 align-left">
+                                                <button class="btn btn-success">Change</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-
     </div>
 
 </div>

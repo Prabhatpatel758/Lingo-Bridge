@@ -11,5 +11,6 @@ export class AvailableslotsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  time = []
 
 }
