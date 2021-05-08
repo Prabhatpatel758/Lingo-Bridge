@@ -5,15 +5,14 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <h2>Select date</h2>
-                        <input class="form-control mt-2" id="date-input" type="date" name="date-input"
-                            placeholder="date">
+                        <input class="form-control mt-2" type="date" (change)="dateValidation()" [(ngModel)]="slot.date"
+                            name="date" #date="ngModel" id="date-input" placeholder="date">
                     </div>
                 </div>
                 <div class="col-md-6 ">
 
                 </div>
                 <div class="col-md-3 ">
-
                     <div class="form-group">
                         <h2>Select Slot</h2>
                         <select class="form-control form-control-lg family" id="sel1">

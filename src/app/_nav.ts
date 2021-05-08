@@ -40,7 +40,7 @@ export const navItems: INavData[] = [
     name: 'Slot Details'
   },
   {
-    name: 'Available Slots',
+    name: 'Book a Slot',
     url: '/default/availableslots',
     icon: 'icon-event',
   },
