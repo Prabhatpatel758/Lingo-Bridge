@@ -5,7 +5,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <h2>Select date</h2>
-                        <input class="form-control mt-2" type="text" (bsValueChange)="dateValidation($event)"
+                        <input class="form-control-lg mt-2 date" type="text" (bsValueChange)="dateValidation($event)"
                             [(ngModel)]="date" bsDatepicker [minDate]="minDate" [maxDate]="maxDate"
                             [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', isAnimated: true }" name="date" id="date"
                             placeholder="Select date">
@@ -17,13 +17,14 @@
                 <div class="col-md-3 ">
                     <div class="form-group">
                         <h2>Select Slot</h2>
-                        <select class="form-control form-control-lg family" id="sel1">
+                        <select class="form-control form-control-lg" id="sel1">
                             <option *ngFor="let slot of timeSlots" [value]="slot.value">{{slot.name}}</option>
 
                         </select>
                     </div>
                 </div>
             </div>
+            <hr>
 
         </div>
     </div>

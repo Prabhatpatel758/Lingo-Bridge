@@ -57,7 +57,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Sessions',
-    url: '/default/widgets',
+    url: '/default/sessions',
     icon: 'icon-organization',
   },
   {

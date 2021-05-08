@@ -12,9 +12,10 @@
     color: #223a66;
   }
   
-  .feature-item h4, h2{
+  .feature-item h4, h2, h3,h5{
     color: #223a66;
     font-weight: 700;
+    font-family: "Exo", sans-serif;
   }
   
   .feature-item p {
@@ -22,4 +23,73 @@
   }
   .align-left{
     text-align: left !important;
+  }
+
+.text-left{
+  text-align: left;
+}
+  @media (max-width: 460px) {
+    .text-left{
+      text-align: center !important;
+    }
+  }
+
+  /* radio boxes implementation */
+  #ck-button input:checked + span {
+    background-color:#4dbd74;
+    color:#fff;
+  }
+  
+  .btncheck {
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.8125rem;
+    letter-spacing: .5px;
+    padding: .75rem 2rem;
+    font-family: "Exo", sans-serif;
+    border-radius: 10px;
+    border: 2px solid;
+    border: 0.5px solid #4dbd74;
+    transition: all .35s ease;
+    color: #4dbd74;
+  }
+  .fontweight{
+    font-weight: bolder;
+  }
+.padding-top{
+  padding-top: 20px;
+}
+.padding-bottom{
+  padding-bottom: 20px;
+
+}
+.btncheck1 {
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.8125rem;
+  letter-spacing: .5px;
+  padding: .75rem;
+  font-family: "Exo", sans-serif;
+  border-radius: 10px;
+  border: 2px solid;
+  border: 0.5px solid #4dbd74;
+  transition: all .35s ease;
+  color: #4dbd74;
+}
+.border-radius{
+  border-radius: 10px;
+}
+
+.text{
+  text-align: left;
+}
+  @media (max-width: 768px) {
+    .text{
+      text-align: center !important;
+    }
+  }
+  .cursor:hover{
+     cursor: pointer;
+     background-color: #c4ebd2;
+     color: black;
   }

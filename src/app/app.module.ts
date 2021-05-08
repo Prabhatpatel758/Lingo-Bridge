@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
-import { ChartsModule } from 'ng2-charts';
 import { DatePipe, CurrencyPipe } from '@angular/common';
 
 
@@ -49,7 +48,6 @@ import {
   AppSidebarModule,
 } from '@coreui/angular';
 import { AuthInterceptor } from './services/auth.interceptor';
-import { PlandetailsComponent } from './views/plandetails/plandetails.component';
 
 @NgModule({
   imports: [
@@ -65,7 +63,6 @@ import { PlandetailsComponent } from './views/plandetails/plandetails.component'
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule,
     IconModule,
     IconSetModule.forRoot(),
     NgxIntlTelInputModule,
@@ -86,7 +83,6 @@ import { PlandetailsComponent } from './views/plandetails/plandetails.component'
     PlansandpricingComponent,
     TeachwithusComponent,
     NavbarmainComponent,
-    PlandetailsComponent,
   ],
   providers: [LoginService, AuthGuard, [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
     { provide: LocationStrategy, useClass: HashLocationStrategy },
