@@ -123,7 +123,7 @@ export const navItems: INavData[] = [
   // },
   {
     name: 'Available Slots',
-    url: '/default/buttons',
+    url: '/default/availableslots',
     icon: 'icon-event',
     // children: [
     //   {

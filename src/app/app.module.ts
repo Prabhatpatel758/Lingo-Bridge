@@ -48,6 +48,7 @@ import {
 } from '@coreui/angular';
 import { AuthInterceptor } from './services/auth.interceptor';
 import { WalletComponent } from './views/wallet/wallet.component';
+import { AvailableslotsComponent } from './views/availableslots/availableslots.component';
 
 @NgModule({
   imports: [
@@ -83,6 +84,7 @@ import { WalletComponent } from './views/wallet/wallet.component';
     TeachwithusComponent,
     NavbarmainComponent,
     WalletComponent,
+    AvailableslotsComponent,
   ],
   providers: [LoginService, AuthGuard, [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
     { provide: LocationStrategy, useClass: HashLocationStrategy },
