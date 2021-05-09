@@ -62,7 +62,7 @@
                                     <h3>1 month</h3>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Special title treatment</h5>
+                                    <h5 class="card-title">{{balance}} / month</h5>
                                     <p class="card-text">
                                     </p>
                                 </div>
@@ -74,7 +74,7 @@
                                     <h3>3 month</h3>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Special title treatment</h5>
+                                    <h5 class="card-title">{{balance}} / month</h5>
                                     <p class="card-text">
                                     </p>
                                 </div>
@@ -88,7 +88,7 @@
                                     <h3>6 month</h3>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Special title treatment</h5>
+                                    <h5 class="card-title">{{balance}} / month</h5>
                                     <p class="card-text">
                                     </p>
                                 </div>
@@ -99,8 +99,8 @@
                                 <div class="card-header border-radius">
                                     <h3>12 month</h3>
                                 </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Special title treatment</h5>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{balance}} / month</h5>
                                     <p class="card-text">
                                     </p>
                                 </div>
@@ -108,8 +108,58 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7" style="background-color: gray;">
-
+                <div class="col-md-7 mt-5">
+                    <div class="feature-item mb-5 mb-lg-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Payment Details</h2>
+                                <h5 class="text-muted">15 min/Session</h5>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-muted">Plan</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="currency-font-color align-right">1 day/week for 1 month</h5>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6 ">
+                                <h5 class="text-muted">Sub-total</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="currency-font-color align-right">{{ balance }}/-</h5>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <h5 class="text-muted">GST Charges</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="currency-font-color align-right">{{ balance }}/-</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-muted">Total</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="currency-font-color align-right">{{ balance }}/-</h5>
+                            </div>
+                        </div>
+                        <div class="row mt-2 text-center">
+                            <div class="col-md-12">
+                                <button class="btn btn-success">Make Payment</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

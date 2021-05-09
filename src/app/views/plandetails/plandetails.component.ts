@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CurrencyPipe } from '@angular/common';
 @Component({
   selector: 'app-plandetails',
   templateUrl: './plandetails.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlandetailsComponent implements OnInit {
 
-  constructor() { }
+  balance = '';
+  constructor(private currency: CurrencyPipe) {
+    this.balance = currency.transform(0, 'INR');
+  }
 
   ngOnInit(): void {
   }

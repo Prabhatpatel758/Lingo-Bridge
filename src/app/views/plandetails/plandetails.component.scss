@@ -24,10 +24,12 @@
   .align-left{
     text-align: left !important;
   }
-
-.text-left{
-  text-align: left;
-}
+  .align-right{
+    text-align: right;
+  }
+  .text-left{
+    text-align: left;
+  }
   @media (max-width: 460px) {
     .text-left{
       text-align: center !important;
@@ -68,7 +70,7 @@
   font-size: 14px;
   font-size: 0.8125rem;
   letter-spacing: .5px;
-  padding: .75rem;
+  padding: 1rem 2rem  ;
   font-family: "Exo", sans-serif;
   border-radius: 10px;
   border: 2px solid;
