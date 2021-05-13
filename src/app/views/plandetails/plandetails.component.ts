@@ -7,7 +7,8 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class PlandetailsComponent implements OnInit {
 
-  balance = '';
+  balance: string = '';
+
   constructor(private currency: CurrencyPipe) {
     this.balance = currency.transform(0, 'INR');
   }
