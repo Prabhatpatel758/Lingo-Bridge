@@ -25,7 +25,7 @@
     text-align: left !important;
   }
   .align-right{
-    text-align: right;
+    text-align: right !important;
   }
   .text-left{
     text-align: left;
@@ -94,4 +94,16 @@
      cursor: pointer;
      background-color: #c4ebd2;
      color: black;
+  }
+  .payment-section{
+    font-family: "Exo", sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    color: #ABAAAA;
+  }
+  .payment-section1{
+    font-family: "Exo", sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    color: black;
   }

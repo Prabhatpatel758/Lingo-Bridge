@@ -108,57 +108,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 mt-5">
-                    <div class="feature-item mb-5 mb-lg-0">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2>Payment Details</h2>
-                                <h5 class="text-muted">15 min/Session</h5>
-                                <hr>
-                            </div>
+                <div class="col-md-7" style="padding-top: 38px;">
+                    <div class="feature-item mb-5 mb-lg-0 ">
+                        <h2>Payment Details</h2>
+                        <h5 class="payment-section">15 min/Session</h5>
+                        <hr>
+                        <div class="d-flex justify-content-between ">
+                            <p class="payment-section">Plan</p>
+                            <p class="payment-section1">1 day/week for 1 month</p>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5 class="text-muted">Plan</h5>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="currency-font-color align-right">1 day/week for 1 month</h5>
-                            </div>
+                        <div class="d-flex justify-content-between ">
+                            <p class=" payment-section">Sub-total</p>
+                            <p class="payment-section1">{{ balance }}/-</p>
                         </div>
-                        <div class="row mt-2">
-                            <div class="col-md-6 ">
-                                <h5 class="text-muted">Sub-total</h5>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="currency-font-color align-right">{{ balance }}/-</h5>
-                            </div>
+                        <div class="d-flex justify-content-between ">
+                            <p class=" payment-section">GST Charges</p>
+                            <p class="payment-section1">{{ balance }}/-</p>
                         </div>
-                        <div class="row mt-2">
-                            <div class="col-md-6">
-                                <h5 class="text-muted">GST Charges</h5>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="currency-font-color align-right">{{ balance }}/-</h5>
-                            </div>
+                        <hr>
+                        <div class="d-flex justify-content-between ">
+                            <p class=" payment-section">Total</p>
+                            <p class="payment-section1">{{ balance }}/-</p>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <hr>
-                            </div>
+                        <div class="text-center">
+                            <button class="btn btn-success">Make Payment</button>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5 class="text-muted">Total</h5>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="currency-font-color align-right">{{ balance }}/-</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2 text-center">
-                            <div class="col-md-12">
-                                <button class="btn btn-success">Make Payment</button>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
