@@ -16,4 +16,8 @@ export class PlandetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectMonth = () => {
+
+  }
+
 }
