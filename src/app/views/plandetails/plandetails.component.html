@@ -1,6 +1,6 @@
 <div class="row mt-3">
-    <div class="col-md-12">
-        <div class="feature-item mb-5 mb-lg-0">
+    <div class="col-md-12 mb-3">
+        <div class="feature-item mb-lg-0">
             <div class="row text-left">
                 <div class="col-md-4 ">
                     <div id="ck-button" class="mt-3">
@@ -60,70 +60,59 @@
             </div>
             <div class="row pt-5 ">
                 <div class="col-md-5 text">
-                    <h2>Select month</h2>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <label class="labl ">
-                                <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month"
-                                    value=1 checked="checked" />
-                                <div class="feature-item1  col-md-6">
-                                    <div class="card-header border-radius">
-                                        <h3>1 month</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-title payment-section">{{month1}}/month</p>
-                                    </div>
+                    <div id="ck-btn" class="mt-3">
+                        <h2>Select month</h2>
+                        <label class="ml-3 mt-2 cursor">
+                            <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month" value=1
+                                checked="checked" hidden />
+                            <span class="btncheck1 padding-top padding-bottom feature-item">
+                                <div class="card-header border-radius">
+                                    <h3>1 month</h3>
                                 </div>
-                            </label>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="labl ">
-                                <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month"
-                                    value=3 checked="checked" />
-                                <div class="feature-item1  col-md-6">
-                                    <div class="card-header border-radius">
-                                        <h3>3 month</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-title payment-section">{{month3}}/month</p>
-                                    </div>
+                                <div class="card-body">
+                                    <p class="card-title payment-section">{{month1}}/month</p>
                                 </div>
-                            </label>
-                        </div>
+                            </span>
+                        </label>
+                        <label class="ml-3 mt-2 cursor">
+                            <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month" value=3
+                                checked="checked" hidden />
+                            <span class="btncheck1 padding-top padding-bottom feature-item">
+                                <div class="card-header border-radius">
+                                    <h3>1 month</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-title payment-section">{{month3}}/month</p>
+                                </div>
+                            </span>
+                        </label>
+                        <label class="ml-3 mt-2 cursor">
+                            <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month" value=6
+                                checked="checked" hidden />
+                            <span class="btncheck1 padding-top padding-bottom feature-item">
+                                <div class="card-header border-radius">
+                                    <h3>1 month</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-title payment-section">{{month6}}/month</p>
+                                </div>
+                            </span>
+                        </label>
+                        <label class="ml-3 mt-2 cursor">
+                            <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month" value=12
+                                checked="checked" hidden />
+                            <span class="btncheck1 padding-top padding-bottom feature-item">
+                                <div class="card-header border-radius">
+                                    <h3>1 month</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-title payment-section">{{month12}}/month</p>
+                                </div>
+                            </span>
+                        </label>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <label class="labl ">
-                                <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month"
-                                    value=6 checked="checked" />
-                                <div class="feature-item1  col-md-6">
-                                    <div class="card-header border-radius">
-                                        <h3>6 month</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-title payment-section">{{month6}}/month</p>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="labl ">
-                                <input type="radio" [(ngModel)]="month" (change)="calculateBalance()" name="month"
-                                    value=12 checked="checked" />
-                                <div class="feature-item1  col-md-6">
-                                    <div class="card-header border-radius">
-                                        <h3>12 month</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-title payment-section">{{month12}}/month</p>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="col-md-7" style="padding-top: 34px;">
+                <div class="col-md-7" style="padding-top: 45px;">
                     <div class="feature-item mb-5 mb-lg-0 ">
                         <h2>Payment Details</h2>
                         <div [hidden]="!isPayment">
@@ -151,7 +140,7 @@
                             </div>
                         </div>
                         <div [hidden]="isPayment">
-                            <div style="height: 290px;">
+                            <div style="height: 215px;">
                                 <p class="payment-section text-center mt-5">Please Select a Plan.</p>
                             </div>
                         </div>

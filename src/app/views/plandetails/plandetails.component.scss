@@ -30,7 +30,7 @@
   .text-left{
     text-align: left;
   }
-  @media (max-width: 460px) {
+  @media (max-width: 566px) {
     .text-left{
       text-align: center !important;
     }
@@ -65,8 +65,8 @@
   padding-bottom: 20px;
 
 }
-#ck-button1 input:checked + .btncheck1 {
-  background-color:#4dbd74;
+#ck-btn input:checked + span {
+  background-color:#c4ebd2;
   color:#fff;
 }
 .btncheck1 {
@@ -74,19 +74,13 @@
   font-size: 14px;
   font-size: 0.8125rem;
   letter-spacing: .5px;
-  padding: .75rem 2rem  ;
+  padding: .75rem 2rem;
   font-family: "Exo", sans-serif;
   border-radius: 10px;
   transition: all .35s ease;
+  color: #4dbd74;
 }
-.feature-item1 {
-  flex-basis: 33.33%;
-  margin: 0px 0px;
-  padding: 15px 20px;
-  background-color: #fff;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);
-}
+
 .border-radius{
   border-radius: 10px;
 }
@@ -101,8 +95,6 @@
   }
   .cursor:hover{
      cursor: pointer;
-     background-color: #c4ebd2;
-     color: black;
   }
   .payment-section{
     font-size: 17px !important;
@@ -115,18 +107,3 @@
     color: black;
   }
 
-  .labl {
-    display : block;
-    width: 400px;
-}
-.labl > input{ /* HIDE RADIO */
-    visibility: hidden; /* Makes input not-clickable */
-    position: absolute; /* Remove input from document flow */
-}
-.labl > input + div{ /* DIV STYLES */
-    cursor:pointer;
-    border:2px solid transparent;
-}
-.labl > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
-    background-color: #c4ebd2;
-}
